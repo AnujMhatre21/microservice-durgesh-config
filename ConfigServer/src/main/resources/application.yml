@@ -1,0 +1,15 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: CONFIG-SERVER
+  config:
+    import: configserver:http://localhost
+    
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/AnujMhatre21/microservice-durgesh-config
+          clone-on-start: true
